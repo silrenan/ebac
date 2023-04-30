@@ -1,31 +1,15 @@
-Feature: checkout-para-finalizar-compra
-Como cliente da EBAC-SHOP
-Quero fazer concluir meu cadastro   
-Para finalizar minha compra
+Feature: checkout
+As an EBAC-SHOP customer I want to conclude my registration to complete the checkout
 
-  Background: dados-obrigatórios
-    Given eu estou na página de checkout
-    And todos os campos obrigatórios estão marcados com asterísco
+  Background: mandatory-data
+    Given I access the checkout page
+    And all mandatory fields are marked with a red asterisk
 
-  Scenario: formato-email
-    When eu não preenhcer o email com o final "@ebac.com.br"
-    Then uma mensagem de erro deve ser exibida
+  Scenario: email-format
+    When I fill the email field with something other than "@ebac.com.br" as domain
+    Then a error message should be displayed.
 
-  Scenario: campos-vazio
-    When eu finalizar a comprar com algum campo em branco
-    Then a compra não será processada e uma mensagem de alerta deve ser exibida
-
-  Scenario Outline: campos-vazios-2
-    When eu finalizar a compra com "<campo>" em vazio
-    Then a compra não será processada
-    And "<mensagem>"de alerta deve ser exibida
-
-    Examples: 
-      | campo     | mensagem                                     |
-      | nome      | "atenção, campo obrigatório nome vazio"      |
-      | sobrenome | "atenção, campo obrigatório sobrenome vazio" |
-      | endereço  | "atenção, campo obrigatório endereço vazio"  |
-      | cidade    | "atenção, campo obrigatório cidade vazio"    |
-      | cep       | "atenção, campo obrigatório cep vazio"       |
-      | telefone  | "atenção, campo obrigatório telefone vazio"  |
-      | email     | "atenção, campo obrigatório email vazio"     |
+  Scenario: empty-fields
+    When I attempt to conclude the process with any field left in blank
+    Then the purchase will not be proccessed
+    And an alert messaged should be diplayed

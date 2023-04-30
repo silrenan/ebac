@@ -1,17 +1,15 @@
-Feature: configurar-produto
-Como cliente da EBAC-SHOP
-Quero configurar meu produto de acordo com meu tamnho e gosto
-E escolher a quantidade
-Para depois inserir no carrinho
+Feature: configure-product
+As an EBAC-SHOP customer I want to configure my product to my size, liking and quantity. I also want to add it to my shopping cart
 
-  Background: seleção-inicial
-    Given eu acesso a página de um produto
+  Background: initial-screen
+    Given I access the product page
+    And I pick a color and size
 
-  Scenario: mudar-de-idéia
-    When escolho entre as cores e tamanhos disponíveis
-    Then o botão limpar deve voltar as opções de cor e tamnho ao estado original
+  Scenario: change-ideia
+    Then the clear button should be enabled
+    And the clear button should reset color and size to their default values
 
-  Scenario: seguir-com-compra
-    When escolho entre as cores e tamanhos disponíveis
-    And a quantidade for selecionada entre 0 e 11
-    Then o botão compra deve permitir a compra
+  Scenario: purchase
+    When I pick a quantity between 0 e 11
+    Then the purchase button should be enabled
+    And the purchase button should direct me to checkout screen

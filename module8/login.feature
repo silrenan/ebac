@@ -1,23 +1,21 @@
-Feature: login-na-plataforma
-Como cliente da EBAC-SHOP
-Quero fazer meu login na plataforma
-Para visualizar meus pedidos
+Feature: login-auth
+As an EBAC-SHOP customer I want to log in to the platform to view my orders
 
-  Background: tela-de-login
-    Given que eu acesso a página de login da EBAC-SHOP
+  Background: login-screen
+    Given that I access the EBAC-SHOP login page
 
-  Scenario: autenticação-válida
-    Given que eu use user: "<user>" and pass: "<pass>" como credenciais
-    Then eu devo ser direcionado para a tela de checkout
+  Scenario: auth-ok
+    Given that I input user: "<user>" and pass: "<pass>" as credentials
+    Then I should be directed to the checkout screen
 
     Examples: 
       | user  | pass |
       | alice | 1234 |
       | bob   | 4321 |
 
-  Scenario: autenticação-inválida
-    Given que eu use user: "<user>" and pass: "<pass>" como credenciais
-    Then eu devo receber uma mensagem de alerta "Crendeciais Inválidas"
+  Scenario: auth-error
+    Given that I input user: "<user>" and pass: "<pass>" as credentials
+    Then I should receive an alert message: "Invalid Credentials"
 
     Examples: 
       | user   | pass |
