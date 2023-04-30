@@ -1,0 +1,5 @@
+Commands to remove submodules:
+git submodule deinit $PATH
+git rm $PATH (--cached if needed)
+git add $PATH
+git commit -m "submodule into regular path"
