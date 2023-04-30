@@ -1,6 +1,6 @@
 Greetings.
 
-This was accomplisehd by cloneing the referred repository as a submodule than "deinit"-ing it as such, to be included as a default path.
+This was accomplisehd by cloning the referred repository as a submodule than "deinit"-ing it as such, to be included as a default path.
  ____                   
 |  _ \  ___  _ __   ___ 
 | | | |/ _ \| '_ \ / _ \
