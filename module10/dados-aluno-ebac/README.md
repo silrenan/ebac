@@ -1,3 +1,9 @@
+ ____                   
+|  _ \  ___  _ __   ___ 
+| | | |/ _ \| '_ \ / _ \
+| |_| | (_) | | | |  __/
+|____/ \___/|_| |_|\___|
+                        
 # Dados aluno
 Faça a edição dos dados do arquivo dados.txt. 
 Fique a vontade se não quiser responder todos os itens. 
