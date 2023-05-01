@@ -1,9 +1,3 @@
-// _____ ____    _    ____ 
-//| ____| __ )  / \  / ___|
-//|  _| |  _ \ / _ \| |    
-//| |___| |_) / ___ \ |___ 
-//|_____|____/_/   \_\____|
-//                         
 Hello everyone,
 
 I am a student at EBAC - Escola Britância de Artes Criativas & Tecnológicas, and I have created this Github repository to upload my exercises for the Quality of Software course.
