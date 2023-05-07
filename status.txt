@@ -1,1 +1,0 @@
-testing pull-push from 2 different git intalltions, with token, at the same physical PC in two different environment
