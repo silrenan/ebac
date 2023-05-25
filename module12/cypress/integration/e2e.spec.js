@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import Actions from '../support/page_objects/actions'
-let checkoutData
 
 context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
 
@@ -10,16 +9,10 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
         3. Preenchendo todas opções no checkout validando minha compra ao final
     */
 
-    beforeEach(() => {
-        cy.fixture('data.json').then(importedData => {
-            checkoutData = importedData
-        })
-    })
-
     beforeEach(() => { cy.visit('/') })
 
     // Checkout Manual
-    it.skip('Checkout Manual', () => {
+    it('Checkout Manual', () => {
         var x = 4
         cy.visit('produtos')
         cy.get('.product-block').first().click()
@@ -48,7 +41,7 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
     })
 
     // Checkout com Faker
-    it.skip('Checkout com Faker', () => {
+    it('Checkout com Faker', () => {
         var faker = require('faker-br')
         var x = 4
         var name1 = faker.name.firstName()
@@ -122,11 +115,25 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
     })
 
     // Checktou com Custom-Commands
+    it('Checkout com Custom-Commands', () => {
+        cy.addProducts(4)
+        cy.addCheckout()
+    })
 
-    // Checkout com Page-Objects + Faker + Fixture + Custom Commands
-    // var faker = require('faker-br')
-    // cy.genFaker()
+    // Checkout com Page-Objects
+    it('Checkout com Page-Objects', () => {
+        Actions.addCart(4)
+        Actions.completeCheckout('João', 'José', 'EBAC', 'Rua A, Número 1', 'Bairro B', 'Manaus', 'Amazonas', '69060020', '(92) 98765-4321', 'josejoao@ebac.com.br')
+    })
+
+    // Checkout com Custom Commands + Faker + Fixture + Page-Objects
+    it('Checkout com Page-Objects + Faker + Fixtures + Custom Commands', () => {
+        var final
+        cy.genFaker() // Faker + Custom Commands >> Fixture
+        Actions.addCart(4)
+        cy.fixture('data.json').then(importedFinal => { // Page-Objects + Fixture
+            final = importedFinal
+            Actions.completeCheckout(final.name1, final.name2, final.company, final.address1, final.address2, final.city, final.state, final.postal, final.phone, final.user)
+        })
+    })
 })
-
-
-
