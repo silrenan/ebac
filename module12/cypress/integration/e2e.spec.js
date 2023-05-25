@@ -10,6 +10,7 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
     */
 
     beforeEach(() => { cy.visit('/') })
+    afterEach(() => { cy.screenshot() });
 
     // Checkout Manual
     it('Checkout Manual', () => {
@@ -53,7 +54,7 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
         var address2 = faker.address.secondaryAddress()
         var state = faker.address.state()
         var city = faker.address.city(state)
-        var zip = faker.address.zipCodeValidByState(state)
+        var postal = faker.address.zipCodeValidByState(state)
         var phone = faker.phone.phoneNumber()
         cy.visit('produtos')
         cy.get('.product-block').first().click()
@@ -72,7 +73,7 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
         cy.get('#billing_address_2').click().clear().type(address2)
         cy.get('#billing_city').click().clear().type(city)
         cy.get('#select2-billing_state-container').click().type(state + '{enter}')
-        cy.get('#billing_postcode').click().clear().type(zip)
+        cy.get('#billing_postcode').click().clear().type(postal)
         cy.get('#billing_phone').click().clear().type(phone)
         cy.get('#billing_email').click().clear().type(user)
         cy.get('#payment_method_bacs').click()
@@ -104,7 +105,7 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
             cy.get('#billing_address_2').click().clear().type(checkoutData.address2)
             cy.get('#billing_city').click().clear().type(checkoutData.city)
             cy.get('#select2-billing_state-container').click().type(checkoutData.state + '{enter}')
-            cy.get('#billing_postcode').click().clear().type(checkoutData.zip)
+            cy.get('#billing_postcode').click().clear().type(checkoutData.postal)
             cy.get('#billing_phone').click().clear().type(checkoutData.phone)
             cy.get('#billing_email').click().clear().type(checkoutData.user)
         })
