@@ -2,16 +2,32 @@ class Actions {
 
     addCart(quantity) {
         let x = quantity
+        // 1º produto
         cy.visit('produtos')
-        cy.get('.product-block').first().click()
+        cy.get('.orderby').select('Ordenar por popularidade')
+        cy.get('.product-block').eq(0).click()
         cy.get('.button-variable-item').first().click() //tamanho
         cy.get('.button-variable-item').last().click()  //cor
-        cy.get('.input-text').clear().type(x)           //quantidade
+        cy.get('.input-text').clear().type(x / 2)         //quantidade
         cy.get('.single_add_to_cart_button').click()
         if (x === 1) {
             cy.contains('foi adicionado')
         } else {
-            cy.contains(x + ' × “')
+            cy.contains(x / 2 + ' × “')
+            cy.contains('foram adicionados')
+        }
+        // 2º produto
+        cy.visit('produtos')
+        cy.get('.orderby').select('Ordenar por popularidade')
+        cy.get('.product-block').eq(1).click()
+        cy.get('.button-variable-item').first().click() //tamanho
+        cy.get('.button-variable-item').last().click()  //cor
+        cy.get('.input-text').clear().type(x / 2)         //quantidade
+        cy.get('.single_add_to_cart_button').click()
+        if (x === 1) {
+            cy.contains('foi adicionado')
+        } else {
+            cy.contains(x / 2 + ' × “')
             cy.contains('foram adicionados')
         }
     }
@@ -32,7 +48,7 @@ class Actions {
         cy.get('#payment_method_bacs').click()
         cy.get('#terms').click()
         cy.get('#place_order').click()
-        cy.contains('Obrigado. Seu pedido foi recebido.') 
+        cy.contains('Obrigado. Seu pedido foi recebido.')
     }
 }
 

@@ -137,4 +137,31 @@ context('Exercicio Módulo 12 - Fluxo de Pedido', () => {
             Actions.completeCheckout(final.name1, final.name2, final.company, final.address1, final.address2, final.city, final.state, final.postal, final.phone, final.user)
         })
     })
+
+    /*
+    
+    Checkout conforme inficado no feedback. Não foi possível compreender com clareza o feedbaack, em minha compreensão o que foi pedido, está contemplado acima.
+    De toda forma, aqui segue o que foi re-solicitado em via de feedback::
+
+        %1 > /comando-customizado/ para adicionar produtos diferentes com parametros.
+        %2 > /page-object/ para adicionar endereço com parametros no checkout.
+        %3 > resultado FORA dos /comando/ ou /page/ (nos exemplos acima, estão dentro de cada respectiva ferramenta).
+
+    Importar observar que o exercício pede utilização de faker e fixtures, o que o feedback não menciona. No que se pese isso, estes também já estão contemplados acima.
+    
+    */
+    it('Checkout conforme "feedback"', () => {
+        var final
+        // uso de faker para gerar fixtures conforme solicitado no enunciado do exercício.
+        cy.genFaker()
+        // conforme solicitado no feedback, inserção de 2 produtos diferentes via comando-customizado com uso de argumento (4)
+        cy.addProducts(4)
+        // conforme solicitado no feedback, inserção de endereço + demais dados de checkout via page-objects com uso de argumento (...)
+        cy.fixture('data.json').then(importedFinal => { // Page-Objects + Fixture
+            final = importedFinal
+            Actions.completeCheckout(final.name1, final.name2, final.company, final.address1, final.address2, final.city, final.state, final.postal, final.phone, final.user)
+        })
+        // condição já existente dentro do Actions.completeCheckout, movida para cá coforme solicitado no feedback
+        cy.contains('Obrigado. Seu pedido foi recebido.')
+    })
 })

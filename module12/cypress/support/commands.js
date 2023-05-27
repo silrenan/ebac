@@ -32,17 +32,30 @@ Cypress.Commands.add('login', (user, pass) => {
 })
 
 Cypress.Commands.add('addProducts', (x) => {
+    // 1º produto
     cy.visit('produtos')
-    cy.get('.product-block').first().click()
+    cy.get('.orderby').select('Ordenar por popularidade')
+    cy.get('.product-block').eq(0).click()
     cy.get('.button-variable-item').first().click() //tamanho
     cy.get('.button-variable-item').last().click()  //cor
-    cy.get('.input-text').clear().type(x)           //quantidade
+    cy.get('.input-text').clear().type(x / 2)         //quantidade
     cy.get('.single_add_to_cart_button').click()
-    cy.contains(x + ' × “')
+    cy.contains(x / 2 + ' × “')
     cy.contains('foram adicionados')
- })
+    // 2º produto
+    cy.visit('produtos')
+    cy.get('.orderby').select('Ordenar por popularidade')
+    cy.get('.product-block').eq(1).click()
+    cy.get('.button-variable-item').first().click() //tamanho
+    cy.get('.button-variable-item').last().click()  //cor
+    cy.get('.input-text').clear().type(x / 2)         //quantidade
+    cy.get('.single_add_to_cart_button').click()
+    cy.contains(x / 2 + ' × “')
+    cy.contains('foram adicionados')
 
- Cypress.Commands.add('addCheckout', () => {
+})
+
+Cypress.Commands.add('addCheckout', () => {
     cy.visit('checkout')
     cy.get('#billing_first_name').click().clear().type('João')
     cy.get('#billing_last_name').click().clear().type('José')
@@ -59,12 +72,12 @@ Cypress.Commands.add('addProducts', (x) => {
     cy.get('#terms').click()
     cy.get('#place_order').click()
     cy.contains('Obrigado. Seu pedido foi recebido.')
- })
+})
 
 Cypress.Commands.add('genFaker', () => {
     var faker = require('faker-br')
     var name = faker.name.firstName()
-    var state = faker.address.state()   
+    var state = faker.address.state()
     cy.writeFile('cypress/fixtures/data.json', {
         'name1': name,
         'name2': faker.name.lastName(),
@@ -79,3 +92,4 @@ Cypress.Commands.add('genFaker', () => {
         'phone': faker.phone.phoneNumber(),
     })
 })
+
