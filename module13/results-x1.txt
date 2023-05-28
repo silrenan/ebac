@@ -1,0 +1,53 @@
+newman
+
+sirenan-ebac-qa-m13
+
+❏ 1-cenario-positivo
+↳ 1-listar-usuarios
+  GET http://localhost:3000/usuarios [200 OK, 735B, 44ms]
+  ✓  Status code is 200
+
+↳ 2-criar-usuario
+  POST http://localhost:3000/usuarios [201 Created, 568B, 6ms]
+  ✓  Status code is 201
+
+↳ 3-listar-usuarios-id
+  GET http://localhost:3000/usuarios/0CHTz4h9CvUDJuFX [200 OK, 642B, 3ms]
+  ✓  Status code is 200
+
+↳ 4-editar-usuario-id
+  PUT http://localhost:3000/usuarios/0CHTz4h9CvUDJuFX [200 OK, 531B, 5ms]
+  ✓  Status code is 200
+
+↳ 5-deletar-usuario-id
+  DELETE http://localhost:3000/usuarios/0CHTz4h9CvUDJuFX [200 OK, 532B, 3ms]
+  ✓  Status code is 200
+
+❏ 2-cenario-negativo
+↳ 6-criar-usuario-sem-payload
+  POST http://localhost:3000/usuarios [400 Bad Request, 665B, 4ms]
+  ✓  Status code is 400
+
+↳ 7-editar-usuario-email-usado
+  PUT http://localhost:3000/usuarios/prIUsIf7auG1lSDSD [400 Bad Request, 543B, 4ms]
+  ✓  Status code is 400
+
+┌─────────────────────────┬──────────────────┬─────────────────┐
+│                         │         executed │          failed │
+├─────────────────────────┼──────────────────┼─────────────────┤
+│              iterations │                1 │               0 │
+├─────────────────────────┼──────────────────┼─────────────────┤
+│                requests │                7 │               0 │
+├─────────────────────────┼──────────────────┼─────────────────┤
+│            test-scripts │                7 │               0 │
+├─────────────────────────┼──────────────────┼─────────────────┤
+│      prerequest-scripts │                0 │               0 │
+├─────────────────────────┼──────────────────┼─────────────────┤
+│              assertions │                7 │               0 │
+├─────────────────────────┴──────────────────┴─────────────────┤
+│ total run duration: 177ms                                    │
+├──────────────────────────────────────────────────────────────┤
+│ total data received: 823B (approx)                           │
+├──────────────────────────────────────────────────────────────┤
+│ average response time: 9ms [min: 3ms, max: 44ms, s.d.: 13ms] │
+└──────────────────────────────────────────────────────────────┘
