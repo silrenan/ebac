@@ -25,9 +25,9 @@
     ✓ Deve deletar um usuário previamente cadastrado
 
 
-  6 passing (295ms)
+  6 passing (296ms)
 
-[mochawesome] Report JSON saved to /home/sirenan/Tgrounds/ebac/module14/mochawesome-report/mochawesome_037.json
+[mochawesome] Report JSON saved to /home/sirenan/Tgrounds/ebac/module14/mochawesome-report/mochawesome_046.json
 
 
   (Results)
@@ -61,9 +61,9 @@
     ✓ Deve fazer login com sucesso
 
 
-  1 passing (78ms)
+  1 passing (85ms)
 
-[mochawesome] Report JSON saved to /home/sirenan/Tgrounds/ebac/module14/mochawesome-report/mochawesome_038.json
+[mochawesome] Report JSON saved to /home/sirenan/Tgrounds/ebac/module14/mochawesome-report/mochawesome_047.json
 
 
   (Results)
@@ -94,19 +94,25 @@
 
 
   Testes da Funcionalidade Produtos
+    ✓ Deve validar contrato de produtos
+    ✓ Deve listar os produtos cadastrados
+    ✓ Deve cadastrar um produto com sucesso
+    ✓ Deve validar mensagem de erro ao cadastrar produto repetido
     ✓ Deve editar um produto já cadastrado
+    ✓ Deve editar um produto cadastrado previamente
+    ✓ Deve deletar um produto previamente cadastrado
 
 
-  1 passing (108ms)
+  7 passing (222ms)
 
-[mochawesome] Report JSON saved to /home/sirenan/Tgrounds/ebac/module14/mochawesome-report/mochawesome_039.json
+[mochawesome] Report JSON saved to /home/sirenan/Tgrounds/ebac/module14/mochawesome-report/mochawesome_048.json
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        1                                                                                │
-  │ Passing:      1                                                                                │
+  │ Tests:        7                                                                                │
+  │ Passing:      7                                                                                │
   │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
@@ -131,11 +137,11 @@
 
        Spec                                              Tests  Passing  Failing  Pending  Skipped  
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ ✔  exercicio-api.spec.js                    291ms        6        6        -        -        - │
+  │ ✔  exercicio-api.spec.js                    296ms        6        6        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  login.spec.js                             75ms        1        1        -        -        - │
+  │ ✔  login.spec.js                             82ms        1        1        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  produtos.spec.js                         107ms        1        1        -        -        - │
+  │ ✔  produtos.spec.js                         222ms        7        7        -        -        - │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    ✔  All specs passed!                        473ms        8        8        -        -        -  
+    ✔  All specs passed!                        600ms       14       14        -        -        -  
 
