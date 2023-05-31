@@ -4,50 +4,57 @@ sirenan-ebac-qa-m13
 
 ❏ 1-cenario-positivo
 ↳ 1-listar-usuarios
-  GET http://localhost:3000/usuarios [200 OK, 735B, 33ms]
+  GET http://localhost:3000/usuarios [200 OK, 735B, 26ms]
   ✓  Status code is 200
+  ✓  Usuário teste existente
 
 ↳ 2-criar-usuario
-  POST http://localhost:3000/usuarios [201 Created, 568B, 6ms]
+  POST http://localhost:3000/usuarios [201 Created, 568B, 7ms]
   ✓  Status code is 201
+  ✓  Cadastro 7HG42HUrN21ZJw4e realizado com sucesso
 
 ↳ 3-listar-usuarios-id
-  GET http://localhost:3000/usuarios/0ygLk1740yjAL2RA [200 OK, 642B, 5ms]
+  GET http://localhost:3000/usuarios/7HG42HUrN21ZJw4e [200 OK, 642B, 4ms]
   ✓  Status code is 200
+  ✓  Listagem do Usuário 7HG42HUrN21ZJw4e
 
 ↳ 4-editar-usuario-id
-  PUT http://localhost:3000/usuarios/0ygLk1740yjAL2RA [200 OK, 531B, 4ms]
+  PUT http://localhost:3000/usuarios/7HG42HUrN21ZJw4e [200 OK, 531B, 5ms]
   ✓  Status code is 200
+  ✓  Registro 7HG42HUrN21ZJw4e alterado com sucesso
 
 ↳ 5-deletar-usuario-id
-  DELETE http://localhost:3000/usuarios/0ygLk1740yjAL2RA [200 OK, 532B, 4ms]
+  DELETE http://localhost:3000/usuarios/7HG42HUrN21ZJw4e [200 OK, 532B, 4ms]
   ✓  Status code is 200
+  ✓  Registro 7HG42HUrN21ZJw4e excluído com sucesso
 
 ❏ 2-cenario-negativo
 ↳ 6-criar-usuario-sem-payload
   POST http://localhost:3000/usuarios [400 Bad Request, 665B, 3ms]
   ✓  Status code is 400
+  ✓  Payload incompleto
 
 ↳ 7-editar-usuario-email-usado
-  PUT http://localhost:3000/usuarios/prIUsIf7auG1lSDSD [400 Bad Request, 543B, 4ms]
+  PUT http://localhost:3000/usuarios/prIUsIf7auG1lSDSD [400 Bad Request, 543B, 5ms]
   ✓  Status code is 400
+  ✓  Email já utilizado
 
-┌─────────────────────────┬──────────────────┬─────────────────┐
-│                         │         executed │          failed │
-├─────────────────────────┼──────────────────┼─────────────────┤
-│              iterations │                1 │               0 │
-├─────────────────────────┼──────────────────┼─────────────────┤
-│                requests │                7 │               0 │
-├─────────────────────────┼──────────────────┼─────────────────┤
-│            test-scripts │                7 │               0 │
-├─────────────────────────┼──────────────────┼─────────────────┤
-│      prerequest-scripts │                0 │               0 │
-├─────────────────────────┼──────────────────┼─────────────────┤
-│              assertions │                7 │               0 │
-├─────────────────────────┴──────────────────┴─────────────────┤
-│ total run duration: 170ms                                    │
-├──────────────────────────────────────────────────────────────┤
-│ total data received: 823B (approx)                           │
-├──────────────────────────────────────────────────────────────┤
-│ average response time: 8ms [min: 3ms, max: 33ms, s.d.: 10ms] │
-└──────────────────────────────────────────────────────────────┘
+┌─────────────────────────┬─────────────────┬─────────────────┐
+│                         │        executed │          failed │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│              iterations │               1 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│                requests │               7 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│            test-scripts │               7 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│      prerequest-scripts │               0 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│              assertions │              14 │               0 │
+├─────────────────────────┴─────────────────┴─────────────────┤
+│ total run duration: 158ms                                   │
+├─────────────────────────────────────────────────────────────┤
+│ total data received: 823B (approx)                          │
+├─────────────────────────────────────────────────────────────┤
+│ average response time: 7ms [min: 3ms, max: 26ms, s.d.: 7ms] │
+└─────────────────────────────────────────────────────────────┘
