@@ -1,6 +1,6 @@
 # 
-./login.spec.js
-./e2e.spec copy.js
+./cypress/integration/login.spec.js
+./cypress/integration/e2e.spec copy.js
 
 # Logs
 logs
