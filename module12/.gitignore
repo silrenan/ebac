@@ -1,5 +1,6 @@
 # 
-login.spec.js
+./login.spec.js
+./e2e.spec copy.js
 
 # Logs
 logs
