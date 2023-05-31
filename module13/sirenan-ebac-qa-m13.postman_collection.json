@@ -18,7 +18,11 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"});"
+									"});",
+									"pm.test(\"Usuário teste existente\", function() {",
+									"        pm.expect(pm.response.text()).to.include(\"teste\");",
+									"})",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -46,16 +50,16 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//parse json",
 									"var responseJson = pm.response.json();",
-									"//extract id",
 									"var idValue = responseJson._id;",
-									"//set id as variable",
 									"pm.environment.set(\"_id\", idValue);",
-									"",
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
-									"});"
+									"});",
+									"pm.test(\"Cadastro \" + idValue + \" realizado com sucesso\", function() {",
+									"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\")",
+									"})",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -92,9 +96,14 @@
 							"listen": "test",
 							"script": {
 								"exec": [
+									"var id = pm.environment.get(\"_id\");",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"});"
+									"});",
+									"pm.test('Listagem do Usuário ' + id, function() {",
+									"    pm.expect(id).not.to.equal('');",
+									"    pm.expect(pm.response.text()).to.include(id);",
+									"})"
 								],
 								"type": "text/javascript"
 							}
@@ -123,9 +132,13 @@
 							"listen": "test",
 							"script": {
 								"exec": [
+									"var id = pm.environment.get(\"_id\");",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"});"
+									"});",
+									"pm.test(\"Registro \" + id + \" alterado com sucesso\", function() {",
+									"        pm.expect(pm.response.text()).to.include(\"Registro alterado com sucesso\");",
+									"})"
 								],
 								"type": "text/javascript"
 							}
@@ -163,13 +176,17 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//set id as null",
+									"var id = pm.environment.get(\"_id\");",
 									"var idValue = \"\";",
 									"pm.environment.set(\"_id\", idValue);",
 									"",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"});"
+									"});",
+									"",
+									"pm.test(\"Registro \" + id + \" excluído com sucesso\", function() {",
+									"        pm.expect(pm.response.text()).to.include(\"Registro excluído com sucesso\");",
+									"})"
 								],
 								"type": "text/javascript"
 							}
@@ -214,7 +231,10 @@
 								"exec": [
 									"pm.test(\"Status code is 400\", function () {",
 									"    pm.response.to.have.status(400);",
-									"});"
+									"});",
+									"pm.test(\"Payload incompleto\", function() {",
+									"        pm.expect(pm.response.text()).to.include(\"é obrigatório\");",
+									"})"
 								],
 								"type": "text/javascript"
 							}
@@ -253,7 +273,10 @@
 								"exec": [
 									"pm.test(\"Status code is 400\", function () {",
 									"    pm.response.to.have.status(400);",
-									"});"
+									"});",
+									"pm.test(\"Email já utilizado\", function() {",
+									"        pm.expect(pm.response.text()).to.include(\"Este email já está sendo usado\");",
+									"})"
 								],
 								"type": "text/javascript"
 							}
