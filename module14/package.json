@@ -12,10 +12,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "cypress": "^9.7.0"
-  },
   "dependencies": {
+    "cypress": "^12.13.0",
     "cypress-multi-reporters": "^1.5.0",
     "faker-br": "^0.4.1",
     "joi": "^17.4.2",

@@ -2,37 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonagem de Repositório') {
+        stage('Clonagem de repositório') {
             steps {
-                // por alguma razão, em meus testes houve timeouts.
-                // acredito que seja pela razão de todos os módulos
-                // estarem sob o mesmo repositório único.
                 timeout(time: 15, unit: 'MINUTES') {
                 git branch: 'main', url: 'https://github.com/Vanguarda101/ebac.git'
                 }
             }
         }
-
-        stage('Instalação do Cypress') {
+        stage('Instalação de dependências') {
             steps {
-                // não houve instalação automática no passo seguinte,
-                // razão essa pela qual se fez presente separadamente.
-                sh 'npm install cypress@12.13.0'
-            }
-        }
-
-        stage('Instalação de dependências do Projeto') {
-            steps {
-                // instalação das dependências do projeto.
                 dir('module14') {
                     sh 'npm install'
                 }
             }
         }
-
-        stage('Execução de Testes') {
+        stage('Execução de testes') {
             steps {
-                // execução de testes.
                 dir('module14') {
                     sh 'NO_COLOR=1 npx cypress run'
                 }
