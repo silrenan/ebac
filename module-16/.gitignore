@@ -1,5 +1,3 @@
-app.apk
-
 # Logs
 logs
 *.log
@@ -131,8 +129,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# apks
-./apps/appium.AppImage
-./apps/inspector.AppImage
-./apps/woo.apk
-
+# apps
+apps/*

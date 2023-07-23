@@ -38,7 +38,7 @@ $ wget https://github.com/appium/appium-inspector/releases/download/v2023.7.1/Ap
 $ mv Appium-Inspector-linux-2023.7.1.AppImage inspector.AppImage
 $ mkdir apps
 $ mv woo.apk appium.AppImage inspector.AppImage apps/
-$ printf '# apks\n./apps/*\n' >> .gitignore
+$ printf '# apks\napps/*\n' >> .gitignore
 $ chmod +x ./apps/*.AppImage
 $ npm init wdio@latest
     # Yes
@@ -56,12 +56,7 @@ $ npm init wdio@latest
     # wait-for
     # appium
     # Yes
-    ...
     # Yes
-    # Need help seeting up Android env.
-    # Android Emulator
-    # Google Chrome
-    ...
     # Exit
 $ npm install wdio
 $ rm test/pageobjects/*
