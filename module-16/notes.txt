@@ -1,0 +1,44 @@
+## feedback ##
+professor sem didática
+explicação sem detalhes úteis
+
+
+r## equisitos ##
+
+android sdk 
+jdk
+webdriver.io
+appium-doctor
+	
+## passos ## 
+
+$ sudo apt install nodejs
+$ sudo apt install npm
+$ sudo apt install -g n
+$ sudo apt install -g npm
+$ sudo apt purge nodejs
+$ sudo n lts
+$ node --version
+$ npm --version
+$ n --version
+$ sudo apt install openjdk-19-jdk
+$ flatpak install app/com.google.AndroidStudio/x86_64/stable
+$ echo 'JAVA_HOME=/usr/lib/jvm/java-19-openjdk-amd64/' >> ~/.bashrc
+$ echo 'ANDROID_HOME=/home/$user$/Android/Sdk/' >> ~/.bashrc
+$ source ~/.bashrc
+## open android studio
+    # more actions
+    # android sdk
+    # unhide obsolete packages
+    # sdk tools (select all)
+$ cd ~/ebac/module-16
+$ npm init -y
+$ npm install appium-doctor
+$ npm install appium
+$ npx appium-doctor
+$ wget https://github.com/woocommerce/woocommerce-android/releases/download/14.4/wcandroid-14.4.apk
+$ mv wcandroid-14.4.apk woo.apk
+$ wget https://github.com/appium/appium-desktop/releases/download/v1.22.3-4/Appium-Server-GUI-linux-1.22.3-4.AppImage
+$ mv Appium-Server-GUI-linux-1.22.3-4.AppImage appium.AppImage
+$ echo ''
+	
