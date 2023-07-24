@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "appium-doctor": "^1.16.2"
+    "appium-doctor": "^1.16.2",
+    "wdio": "^6.0.1"
   },
   "devDependencies": {
     "@wdio/appium-service": "^8.13.4",
@@ -20,6 +21,8 @@
     "@wdio/mocha-framework": "^8.12.1",
     "@wdio/spec-reporter": "^8.12.2",
     "appium": "^2.0.0",
-    "appium-uiautomator2-driver": "^2.29.2"
+    "appium-uiautomator2-driver": "^2.29.2",
+    "ts-node": "^10.9.1",
+    "wdio-chromedriver-service": "^8.1.1"
   }
 }

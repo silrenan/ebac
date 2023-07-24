@@ -1,106 +1,124 @@
-@@ Node
+# Node.
 
-$ sudo apt install nodejs
-$ sudo apt install npm
-$ sudo apt install -g n
-$ sudo apt install -g npm
-$ sudo apt purge nodejs
-$ sudo n lts
-$ node --version
-$ npm --version
-$ n --version
+    $ sudo apt install nodejs
+    $ sudo apt install npm
+    $ sudo apt install -g n
+    $ sudo apt install -g npm
+    $ sudo apt purge nodejs
+    $ sudo n lts
+    $ node --version
+    $ npm --version
+    $ n --version
 
-@@ JDK, SDK, ADB
+# JDK, SDK, ADB.
 
-$ sudo apt install adb
-$ sudo apt install openjdk-19-jdk
-$ echo 'JAVA_HOME=/usr/lib/jvm/java-19-openjdk-amd64/' >> ~/.bashrc
-$ flatpak install app/com.google.AndroidStudio/x86_64/stable
-$ echo 'ANDROID_HOME=/home/$user$/Android/Sdk/' >> ~/.bashrc
-$ source ~/.bashrc
-## open android studio
-    # more actions
-    # android sdk
-    # unhide obsolete packages
-    # sdk tools (select all)
+    $ sudo apt install adb
+    $ sudo apt install openjdk-19-jdk
+    $ echo 'JAVA_HOME=/usr/lib/jvm/java-19-openjdk-amd64/' >> ~/.bashrc
+    $ flatpak install app/com.google.AndroidStudio/x86_64/stable
+    $ echo 'ANDROID_HOME=/home/$user$/Android/Sdk/' >> ~/.bashrc
+    $ source ~/.bashrc
 
-@@ Appium Doctor, Appium Server, Appium Inspector, APK, WDIO
+    // open android studio.
+    |_ more actions.
+    |_ android sdk.
+    |_ unhide obsolete packages.
+    |_ sdk tools (select all).
 
-$ mkdir ~/ebac/module-16
-$ cd ~/ebac/module-16
-$ npm init -y
-$ npm install appium-doctor
-$ wget https://github.com/woocommerce/woocommerce-android/releases/download/14.4/wcandroid-14.4.apk
-$ mv wcandroid-14.4.apk woo.apk
-$ wget https://github.com/appium/appium-desktop/releases/download/v1.22.3-4/Appium-Server-GUI-linux-1.22.3-4.AppImage
-$ mv Appium-Server-GUI-linux-1.22.3-4.AppImage appium.AppImage
-$ wget https://github.com/appium/appium-inspector/releases/download/v2023.7.1/Appium-Inspector-linux-2023.7.1.AppImage
-$ mv Appium-Inspector-linux-2023.7.1.AppImage inspector.AppImage
-$ mkdir apps
-$ mv woo.apk appium.AppImage inspector.AppImage apps/
-$ printf '# apks\napps/*\n' >> .gitignore
-$ chmod +x ./apps/*.AppImage
-$ npm init wdio@latest
-    # Yes
-    # E2E testing
-    # Local machine
-    # Mobile
-    # Android
-    # Mocha
-    # No
-    # Yes
-    # <enter>
-    # Yes
-    # <enter>
-    # spec
-    # wait-for
-    # appium
-    # Yes
-    # Yes
-    # Exit
-$ npm install wdio
-$ rm test/pageobjects/*
-$ rm test/specs/*
-$ npx appium-doctor
-# Have the following wdio.conf.js:
-$ cat wdio.conf.js 
-    // const path = require('path');
-    exports.config = {
-        hostname: 'localhost',
-        port: 4723,
-        path: '/wd/hub',
-        specs: ['./test/specs/**/*.js'],
-        framework: 'mocha',
-        capabilities: [{
-            "platformName": "Android",
-            "platformVersion": "12",
-            "deviceName": "Test",
-            "automationName": "UiAutomator2",
-            "appPackage": "com.woocommerce.android",
-            "appActivity": ".ui.main.MainActivity",
-            "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
-            //"app": path.join(__dirname, 'apps', '*.apk')
-        }]
-    }
+# Appium Doctor, Appium Server, Appium Inspector, APK, WDIO.
 
-@@ Emulation
+    $ mkdir ~/ebac/module-16
+    $ cd ~/ebac/module-16
+    $ mkdir apps
+    $ npm init -y
+    $ npm install appium-doctor
+    $ wget https://github.com/woocommerce/woocommerce-android/releases/download/14.4/wcandroid-14.4.apk
+    $ mv wcandroid-14.4.apk apps/woo.apk
+    $ wget https://github.com/appium/appium-desktop/releases/download/v1.22.3-4/Appium-Server-GUI-linux-1.22.3-4.AppImage
+    $ mv Appium-Server-GUI-linux-1.22.3-4.AppImage apps/appium.AppImage
+    $ wget https://github.com/appium/appium-inspector/releases/download/v2023.7.1/Appium-Inspector-linux-2023.7.1.AppImage
+    $ mv Appium-Inspector-linux-2023.7.1.AppImage apps/inspector.AppImage
+    $ printf '# apks\napps/*\n' >> .gitignore
+    $ chmod +x ./apps/*.AppImage
+    $ npm install wdio
+    $ npx wdio config
+        Yes
+        E2E testing
+        Local machine
+        Mobile
+        Android
+        Mocha
+        No
+        Yes
+        <enter>
+        Yes
+        <enter>
+        spec
+        wait-for
+        appium
+        Yes
+        Yes
+        Exit
+    $ rm test/pageobjects/* test/specs/*
+    $ npx appium-doctor
+    $ npx appium --allow-insecure chromedriver_autodownload
 
-# On Android Studio, create an Pixel 2 Android 12, just as above configured.
-# On Android Studio, start the created device. Wait a while, it is slow, specially on the 1st run.
-# On Android Emulator, drop the woo.apk, it will install it.
-# On Android Emulator, create a shortcut for woo.apk on the main screen.
-$ ./apps/appium.AppImage
-$ ./apps/inspector.Appimage
-# On Inspector, Remote Path : /wd/hub
-# On Inspector:
-{
-            "platformName": "Android",
-            "platformVersion": "12",
-            "deviceName": "Test",
-            "automationName": "UiAutomator2",
-            "appPackage": "com.woocommerce.android",
-            "appActivity": ".ui.main.MainActivity",
-            "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
-}
-# On Inspector, hit the Save button
-# On Inspector, hit the Start Session button
+# Test Emulation.
+
+    // Have the following wdio.conf.js:
+
+    $ cat wdio.conf.js 
+        exports.config = {
+            hostname: 'localhost',
+            port: 4723,
+            path: '/wd/hub',
+            specs: ['./test/specs/**/*.js'],
+            framework: 'mocha',
+            capabilities: [{
+                "platformName": "Android",
+                "platformVersion": "12",
+                "deviceName": "Test",
+                "automationName": "UiAutomator2",
+                "appPackage": "com.woocommerce.android",
+                "appActivity": ".ui.main.MainActivity",
+                "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
+            }]
+        }
+
+    // On Android Studio, create an Pixel 2 Android 12, start the created device.
+    // On Android Emulator, drop the woo.apk, it will install it.
+
+    $ ./apps/appium.AppImage
+    $ ./apps/inspector.Appimage
+
+    // On Inspector [Remote Path : /wd/hub] and:
+
+        {
+                    "platformName": "Android",
+                    "platformVersion": "12",
+                    "deviceName": "Test",
+                    "automationName": "UiAutomator2",
+                    "appPackage": "com.woocommerce.android",
+                    "appActivity": ".ui.main.MainActivity",
+                    "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
+        }
+
+    // On Inspector, hit the Save and Start Session.
+
+# Module-16 Final Task.
+
+    $ wget https://github.com/webdriverio/native-demo-app/releases/download/v0.4.0/Android-NativeDemoApp-0.4.0.apk
+    $ mv Android-NativeDemoApp-0.4.0.apk apps/native.apk
+
+    // open Android Emulator, Virtual Device Manager and copy [.apps/native.apk] to the emulation, creating a shortcut on the main screen.
+    // task.spec.js should contain:
+    
+    describe('module 16 task', function() {
+    it('should complete module 16 task', async function() {
+        setTimeout(()=>{
+            console.log('abriu')
+        }, 10000)
+    });
+})
+
+
