@@ -1,6 +1,6 @@
-// const path = require('path');
+const path = require('path');
 exports.config = {
-    hostname: 'localhost',
+    hostname: '127.0.0.1',
     port: 4723,
     path: '/wd/hub',
     specs: ['./test/specs/**/*.js'],
@@ -12,7 +12,7 @@ exports.config = {
         "automationName": "UiAutomator2",
         "appPackage": "com.woocommerce.android",
         "appActivity": ".ui.main.MainActivity",
-        "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
-        //"app": path.join(__dirname, 'apps', '*.apk')
+        "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity",
+        "app": path.join(__dirname, 'apps', 'woo.apk')
     }]
 }

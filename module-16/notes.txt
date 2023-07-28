@@ -121,4 +121,7 @@
     });
 })
 
-
+    $ ./apps/appium.AppImage
+    $ ./apps/inspector.Appimage
+    $ npx wdio
+    
