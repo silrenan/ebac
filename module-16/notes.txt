@@ -119,9 +119,9 @@
             console.log('abriu')
         }, 10000)
     });
-})
+    })
 
     $ ./apps/appium.AppImage
     $ ./apps/inspector.Appimage
-    $ npx wdio
+    $ npm run woo/wdio
     

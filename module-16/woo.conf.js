@@ -13,6 +13,6 @@ exports.config = {
         "appPackage": "com.woocommerce.android",
         "appActivity": ".ui.main.MainActivity",
         "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity",
-        "app": path.join(__dirname, 'apps', 'wdio.apk')
+        "app": path.join(__dirname, 'apps', 'woo.apk')
     }]
 }
