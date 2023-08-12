@@ -16,4 +16,10 @@ describe('module 16 task', function() {
         const switchButton = await testPage.switchTest();
         expect(switchButton).toEqual("Click to turn the switch OFF");
     });
+
+    it('test dropdown field', async function() {        
+        const dropdownSelector = await testPage.dropdownTest();
+        expect(dropdownSelector).toEqual("webdriver.io is awesome");
+ 
+    });
 })

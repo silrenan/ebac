@@ -21,6 +21,15 @@ class TestPage {
         return switchResult
     }
 
+    async dropdownTest() {
+            const dropdownButton = await $('//android.view.ViewGroup[@content-desc="Dropdown"]/android.view.ViewGroup/android.widget.EditText');
+            await dropdownButton.click();
+            const dropdownEntry = await $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]')
+            await dropdownEntry.click();
+            const dropdownText = await dropdownButton.getText();
+            return dropdownText
+    }
+
 }
 
 module.exports = new TestPage()
