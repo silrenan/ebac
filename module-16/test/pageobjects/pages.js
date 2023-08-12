@@ -7,7 +7,7 @@ class TestPage {
 
     async fieldTest(inputText) {
         const input = $('accessibility id:text-input');
-        const result = $('accessibility id:input-text-result')
+        const result = $('accessibility id:input-text-result');
         await input.setValue(inputText);
         const output = await result.getText();
         return output;
@@ -17,6 +17,8 @@ class TestPage {
         const switchButton = $('accessibility id:switch');
         await switchButton.click();
         const switchText = $('accessibility id:switch-text');
+        const switchResult = await switchText.getText();
+        return switchResult
     }
 
 }

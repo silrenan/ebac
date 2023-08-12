@@ -13,6 +13,7 @@ describe('module 16 task', function() {
     });
 
     it('test switch field', async function() {
-        await testPage.switchTest();
+        const switchButton = await testPage.switchTest();
+        expect(switchButton).toEqual("Click to turn the switch OFF");
     });
 })
