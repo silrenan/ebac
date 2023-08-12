@@ -5,14 +5,18 @@ class TestPage {
         await formsButton.click();
     }
 
-    async inputTest(inputText) {
+    async fieldTest(inputText) {
         const input = $('accessibility id:text-input');
+        const result = $('accessibility id:input-text-result')
         await input.setValue(inputText);
+        const output = await result.getText();
+        return output;
     }
 
     async switchTest() {
-        const formsButton = $('accessibility id:switch');
-        await formsButton.click();
+        const switchButton = $('accessibility id:switch');
+        await switchButton.click();
+        const switchText = $('accessibility id:switch-text');
     }
 
 }
