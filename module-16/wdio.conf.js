@@ -7,12 +7,11 @@ exports.config = {
     framework: 'mocha',
     capabilities: [{
         "platformName": "Android",
-        "platformVersion": "12",
-        "deviceName": "Test",
-        "automationName": "UiAutomator2",
-        "appPackage": "com.woocommerce.android",
-        "appActivity": ".ui.main.MainActivity",
-        "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity",
-        "app": path.join(__dirname, 'apps', 'wdio.apk')
+        "appium:platformVersion": "12",
+        "appium:deviceName": "Test",
+        "appium:automationName": "UiAutomator2",
+        "appium:appPackage": "com.wdiodemoapp",
+        "appium:appActivity": ".MainActivity",
+        "appium:app": path.join(__dirname, 'apps', 'wdio.apk')
     }]
 }

@@ -79,8 +79,8 @@
                 "platformVersion": "12",
                 "deviceName": "Test",
                 "automationName": "UiAutomator2",
-                "appPackage": "com.woocommerce.android",
-                "appActivity": ".ui.main.MainActivity",
+                "appPackage": "com.wdiodemoapp",
+                "appActivity": ".MainActivity",
                 "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
             }]
         }
@@ -92,15 +92,13 @@
     $ ./apps/inspector.Appimage
 
     // On Inspector [Remote Path : /wd/hub] and:
-
         {
-                    "platformName": "Android",
-                    "platformVersion": "12",
-                    "deviceName": "Test",
-                    "automationName": "UiAutomator2",
-                    "appPackage": "com.woocommerce.android",
-                    "appActivity": ".ui.main.MainActivity",
-                    "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity"
+        "platformName": "Android",
+        "appium:platformVersion": "12",
+        "appium:deviceName": "Test",
+        "appium:automationName": "UiAutomator2",
+        "appium:appPackage": "com.wdiodemoapp",
+        "appium:appActivity": ".MainActivity"
         }
 
     // On Inspector, hit the Save and Start Session.
@@ -123,5 +121,23 @@
 
     $ ./apps/appium.AppImage
     $ ./apps/inspector.Appimage
-    $ npm run woo/wdio
+    $ npm run wdio (.conf.js)
     
+
+
+
+    
+    it('test switch toggle', async function() {
+        await testPage.goForm()
+        await testPage.switchTest()
+    });
+
+    it('test dropdown menu', async function() {
+        await testPage.goForm()
+        await testPage.dropdownTest()
+    });
+
+    it('test button behavior', async function() {
+        await testPage.goForm()
+        await testPage.buttonTest()
+    });
