@@ -19,12 +19,11 @@ describe('module 16 task', function() {
 
     it('test dropdown field', async function() {        
         const dropdownSelector = await testPage.dropdownTest();
-        expect(dropdownSelector).toEqual("webdriver.io is awesome");
- 
+        expect(dropdownSelector).toEqual("webdriver.io is awesome"); 
     });
 
     it('test click button'), async function() {
         const buttonClick = await testPage.clickTest();
-        expect(buttonClick).toEqual("This button is active");
+        expect(buttonClick).toEqual("This button is active")
     }
 })
