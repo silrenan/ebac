@@ -22,4 +22,9 @@ describe('module 16 task', function() {
         expect(dropdownSelector).toEqual("webdriver.io is awesome");
  
     });
+
+    it('test click button'), async function() {
+        const buttonClick = await testPage.clickTest();
+        expect(buttonClick).toEqual("This button is active");
+    }
 })
