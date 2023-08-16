@@ -122,3 +122,4 @@
     $ ./apps/appium.AppImage
     $ ./apps/inspector.Appimage
     $ npm run wdio (.conf.js)
+    
