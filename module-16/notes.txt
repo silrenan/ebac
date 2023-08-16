@@ -122,22 +122,3 @@
     $ ./apps/appium.AppImage
     $ ./apps/inspector.Appimage
     $ npm run wdio (.conf.js)
-    
-
-
-
-    
-    it('test switch toggle', async function() {
-        await testPage.goForm()
-        await testPage.switchTest()
-    });
-
-    it('test dropdown menu', async function() {
-        await testPage.goForm()
-        await testPage.dropdownTest()
-    });
-
-    it('test button behavior', async function() {
-        await testPage.goForm()
-        await testPage.buttonTest()
-    });
