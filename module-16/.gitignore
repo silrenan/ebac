@@ -131,6 +131,4 @@ dist
 
 # apps
 apps/*
-
-# notes
-notes.txt
+notes
