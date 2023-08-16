@@ -31,6 +31,10 @@ class TestPage {
     }
 
     async clickTest(){
+        await driver.execute('mobile: shell', {
+            command: 'input swipe',
+            args: ['100', '100', '100', '-500', '1000']
+        });
         const clickButton = await $('//android.view.ViewGroup[@content-desc="button-Active"]');
         await clickButton.click();
         const clickEntry = await $('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView')

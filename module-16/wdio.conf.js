@@ -5,6 +5,7 @@ exports.config = {
     path: '/wd/hub',
     specs: ['./test/specs/**/*.js'],
     framework: 'mocha',
+    reporters: ['spec'],
     capabilities: [{
         "platformName": "Android",
         "appium:platformVersion": "12",

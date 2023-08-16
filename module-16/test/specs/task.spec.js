@@ -1,9 +1,15 @@
 const testPage = require('../pageobjects/pages')
+const path = require('path');
 
 describe('module 16 task', function() {
-    
-    beforeEach(async function() {
+
+    before(async function() {
         await testPage.goForm();
+        await browser.startRecordingScreen();
+    });
+
+    after(async function() {
+        await browser.saveRecordingScreen(path.join(__dirname, '../evidences', 'results.mp4'));
     });
 
     it('test input field', async function() { 
@@ -22,8 +28,8 @@ describe('module 16 task', function() {
         expect(dropdownSelector).toEqual("webdriver.io is awesome"); 
     });
 
-    it('test click button'), async function() {
+    it('test click button', async function() {
         const buttonClick = await testPage.clickTest();
         expect(buttonClick).toEqual("This button is active")
-    }
+    });
 })
