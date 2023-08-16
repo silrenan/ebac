@@ -1,0 +1,120 @@
+
+> module-16@1.0.0 wdio
+> wdio run ./wdio.conf.js
+
+
+Execution of 1 workers started at 2023-08-15T23:44:57.812Z
+
+2023-08-15T23:44:57.818Z INFO @wdio/cli:launcher: Run onPrepare hook
+2023-08-15T23:44:57.820Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-08-15T23:44:57.821Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.conf.js
+[0-0] 2023-08-15T23:44:58.369Z INFO @wdio/local-runner: Run worker command: run
+[0-0] RUNNING in Android - file:///test/specs/task.spec.js
+[0-0] 2023-08-15T23:44:58.415Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-0] 2023-08-15T23:44:58.468Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session
+[0-0] 2023-08-15T23:44:58.468Z INFO webdriver: DATA {
+[0-0]   capabilities: {
+[0-0]     alwaysMatch: {
+[0-0]       platformName: 'Android',
+[0-0]       'appium:platformVersion': '12',
+[0-0]       'appium:deviceName': 'Test',
+[0-0]       'appium:automationName': 'UiAutomator2',
+[0-0]       'appium:appPackage': 'com.wdiodemoapp',
+[0-0]       'appium:appActivity': '.MainActivity',
+[0-0]       'appium:app': '/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk'
+[0-0]     },
+[0-0]     firstMatch: [ {} ]
+[0-0]   },
+[0-0]   desiredCapabilities: {
+[0-0]     platformName: 'Android',
+[0-0]     'appium:platformVersion': '12',
+[0-0]     'appium:deviceName': 'Test',
+[0-0]     'appium:automationName': 'UiAutomator2',
+[0-0]     'appium:appPackage': 'com.wdiodemoapp',
+[0-0]     'appium:appActivity': '.MainActivity',
+[0-0]     'appium:app': '/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk'
+[0-0]   }
+[0-0] }
+[0-0] 2023-08-15T23:45:02.652Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.Button[@content-desc="Forms"]")
+[0-0] 2023-08-15T23:45:02.652Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element
+[0-0] 2023-08-15T23:45:02.652Z INFO webdriver: DATA {
+[0-0]   using: 'xpath',
+[0-0]   value: '//android.widget.Button[@content-desc="Forms"]'
+[0-0] }
+[0-0] 2023-08-15T23:45:03.578Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-08f9-ffff-ffff00000024',
+[0-0]   ELEMENT: '00000000-0000-08f9-ffff-ffff00000024'
+[0-0] }
+[0-0] 2023-08-15T23:45:03.583Z INFO webdriver: COMMAND elementClick("00000000-0000-08f9-ffff-ffff00000024")
+[0-0] 2023-08-15T23:45:03.583Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element/00000000-0000-08f9-ffff-ffff00000024/click
+[0-0] 2023-08-15T23:45:03.620Z INFO webdriver: RESULT null
+[0-0] 2023-08-15T23:45:03.621Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@content-desc="input-text-result"]")
+[0-0] 2023-08-15T23:45:03.621Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.EditText[@content-desc="text-input"]")
+[0-0] 2023-08-15T23:45:03.621Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element
+[0-0] 2023-08-15T23:45:03.622Z INFO webdriver: DATA {
+[0-0]   using: 'xpath',
+[0-0]   value: '//android.widget.TextView[@content-desc="input-text-result"]'
+[0-0] }
+[0-0] 2023-08-15T23:45:03.622Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element
+[0-0] 2023-08-15T23:45:03.622Z INFO webdriver: DATA {
+[0-0]   using: 'xpath',
+[0-0]   value: '//android.widget.EditText[@content-desc="text-input"]'
+[0-0] }
+[0-0] 2023-08-15T23:45:03.733Z INFO webdriver: RESULT {
+[0-0]   error: 'no such element',
+[0-0]   message: 'An element could not be located on the page using the given search parameters.',
+[0-0]   stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+[0-0]     '    at AndroidUiautomator2Driver.findElOrEls (/tmp/.mount_appiumjbs0hQ/resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)\n' +
+[0-0]     '    at runMicrotasks (<anonymous>)\n' +
+[0-0]     '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+[0-0]     '    at AndroidUiautomator2Driver.findElOrElsWithProcessing (/tmp/.mount_appiumjbs0hQ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:33:12)\n' +
+[0-0]     '    at AndroidUiautomator2Driver.findElement (/tmp/.mount_appiumjbs0hQ/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:53:10)'
+[0-0] }
+[0-0] 2023-08-15T23:45:04.046Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-08f9-ffff-ffff0000004d',
+[0-0]   ELEMENT: '00000000-0000-08f9-ffff-ffff0000004d'
+[0-0] }
+[0-0] 2023-08-15T23:45:04.049Z INFO webdriver: COMMAND elementClear("00000000-0000-08f9-ffff-ffff0000004d")
+[0-0] 2023-08-15T23:45:04.049Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element/00000000-0000-08f9-ffff-ffff0000004d/clear
+[0-0] 2023-08-15T23:45:04.797Z INFO webdriver: RESULT null
+[0-0] 2023-08-15T23:45:04.798Z INFO webdriver: COMMAND elementSendKeys("00000000-0000-08f9-ffff-ffff0000004d", "Teste")
+[0-0] 2023-08-15T23:45:04.798Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element/00000000-0000-08f9-ffff-ffff0000004d/value
+[0-0] 2023-08-15T23:45:04.798Z INFO webdriver: DATA { text: 'Teste' }
+[0-0] 2023-08-15T23:45:05.326Z INFO webdriver: RESULT null
+[0-0] 2023-08-15T23:45:05.327Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.TextView[@content-desc="input-text-result"]")
+[0-0] 2023-08-15T23:45:05.327Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/elements
+[0-0] 2023-08-15T23:45:05.327Z INFO webdriver: DATA {
+[0-0]   using: 'xpath',
+[0-0]   value: '//android.widget.TextView[@content-desc="input-text-result"]'
+[0-0] }
+[0-0] 2023-08-15T23:45:05.981Z INFO webdriver: RESULT [
+[0-0]   {
+[0-0]     'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-08f9-ffff-ffff00000050',
+[0-0]     ELEMENT: '00000000-0000-08f9-ffff-ffff00000050'
+[0-0]   }
+[0-0] ]
+[0-0] 2023-08-15T23:45:05.983Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@content-desc="input-text-result"]")
+[0-0] 2023-08-15T23:45:05.983Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element
+[0-0] 2023-08-15T23:45:05.983Z INFO webdriver: DATA {
+[0-0]   using: 'xpath',
+[0-0]   value: '//android.widget.TextView[@content-desc="input-text-result"]'
+[0-0] }
+[0-0] 2023-08-15T23:45:06.030Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-08f9-ffff-ffff00000050',
+[0-0]   ELEMENT: '00000000-0000-08f9-ffff-ffff00000050'
+[0-0] }
+[0-0] 2023-08-15T23:45:06.032Z INFO webdriver: COMMAND getElementText("00000000-0000-08f9-ffff-ffff00000050")
+[0-0] 2023-08-15T23:45:06.032Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8/element/00000000-0000-08f9-ffff-ffff00000050/text
+[0-0] 2023-08-15T23:45:06.042Z INFO webdriver: RESULT Teste
+[0-0] 2023-08-15T23:45:06.045Z INFO webdriver: COMMAND deleteSession()
+[0-0] 2023-08-15T23:45:06.045Z INFO webdriver: [DELETE] http://127.0.0.1:4723/wd/hub/session/bf5f93a1-f577-47e9-80c8-7c40450901f8
+[0-0] 2023-08-15T23:45:06.206Z INFO webdriver: RESULT null
+[0-0] FAILED in Android - file:///test/specs/task.spec.js
+2023-08-15T23:45:06.315Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-08-15T23:45:06.316Z INFO @wdio/cli:launcher: Run onComplete hook
+
+Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:08 
+
+2023-08-15T23:45:06.317Z INFO @wdio/local-runner: Shutting down spawned worker
+2023-08-15T23:45:06.568Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2023-08-15T23:45:06.568Z INFO @wdio/local-runner: shutting down
