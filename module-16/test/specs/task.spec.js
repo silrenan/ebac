@@ -5,11 +5,11 @@ describe('module 16 task', function() {
 
     before(async function() {
         await testPage.goForm();
-        await browser.startRecordingScreen();
+        await driver.startRecordingScreen();
     });
 
     after(async function() {
-        await browser.saveRecordingScreen(path.join(__dirname, '../evidences', 'results.mp4'));
+        await driver.saveRecordingScreen(path.join(__dirname, '../evidences', 'results.mp4'));
     });
 
     it('test input field', async function() { 

@@ -3,16 +3,16 @@
 > wdio run ./wdio.conf.js
 
 
-Execution of 1 workers started at 2023-08-16T02:21:12.799Z
+Execution of 1 workers started at 2023-08-20T16:47:33.764Z
 
-2023-08-16T02:21:12.806Z INFO @wdio/cli:launcher: Run onPrepare hook
-2023-08-16T02:21:12.808Z INFO @wdio/cli:launcher: Run onWorkerStart hook
-2023-08-16T02:21:12.809Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.conf.js
-[0-0] 2023-08-16T02:21:13.344Z INFO @wdio/local-runner: Run worker command: run
+2023-08-20T16:47:33.773Z INFO @wdio/cli:launcher: Run onPrepare hook
+2023-08-20T16:47:33.774Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-08-20T16:47:33.775Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.conf.js
+[0-0] 2023-08-20T16:47:34.368Z INFO @wdio/local-runner: Run worker command: run
 [0-0] RUNNING in Android - file:///test/specs/task.spec.js
-[0-0] 2023-08-16T02:21:13.403Z INFO webdriver: Initiate new session using the WebDriver protocol
-[0-0] 2023-08-16T02:21:13.455Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session
-[0-0] 2023-08-16T02:21:13.455Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:34.445Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-0] 2023-08-20T16:47:34.505Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session
+[0-0] 2023-08-20T16:47:34.506Z INFO webdriver: DATA {
 [0-0]   capabilities: {
 [0-0]     alwaysMatch: {
 [0-0]       platformName: 'Android',
@@ -35,187 +35,167 @@ Execution of 1 workers started at 2023-08-16T02:21:12.799Z
 [0-0]     'appium:app': '/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk'
 [0-0]   }
 [0-0] }
-[0-0] 2023-08-16T02:21:17.818Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.Button[@content-desc="Forms"]")
-[0-0] 2023-08-16T02:21:17.819Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:17.819Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:38.802Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.Button[@content-desc="Forms"]")
+[0-0] 2023-08-20T16:47:38.803Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:38.803Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '//android.widget.Button[@content-desc="Forms"]'
 [0-0] }
-[0-0] 2023-08-16T02:21:18.726Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0b9f-ffff-ffff00000024',
-[0-0]   ELEMENT: '00000000-0000-0b9f-ffff-ffff00000024'
+[0-0] 2023-08-20T16:47:39.853Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc3-ffff-ffff00000024',
+[0-0]   ELEMENT: '00000000-0000-0bc3-ffff-ffff00000024'
 [0-0] }
-[0-0] 2023-08-16T02:21:18.731Z INFO webdriver: COMMAND elementClick("00000000-0000-0b9f-ffff-ffff00000024")
-[0-0] 2023-08-16T02:21:18.731Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff00000024/click
-[0-0] 2023-08-16T02:21:18.777Z INFO webdriver: RESULT null
-[0-0] 2023-08-16T02:21:18.777Z INFO webdriver: COMMAND startRecordingScreen()
-[0-0] 2023-08-16T02:21:18.778Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/appium/start_recording_screen
-[0-0] 2023-08-16T02:21:19.247Z INFO webdriver: RESULT 
-[0-0] 2023-08-16T02:21:19.248Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@content-desc="input-text-result"]")
-[0-0] 2023-08-16T02:21:19.248Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.EditText[@content-desc="text-input"]")
-[0-0] 2023-08-16T02:21:19.248Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:19.248Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:39.858Z INFO webdriver: COMMAND elementClick("00000000-0000-0bc3-ffff-ffff00000024")
+[0-0] 2023-08-20T16:47:39.859Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff00000024/click
+[0-0] 2023-08-20T16:47:39.898Z INFO webdriver: RESULT null
+[0-0] 2023-08-20T16:47:39.898Z INFO webdriver: COMMAND startRecordingScreen()
+[0-0] 2023-08-20T16:47:39.898Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/appium/start_recording_screen
+[0-0] 2023-08-20T16:47:40.333Z INFO webdriver: RESULT 
+[0-0] 2023-08-20T16:47:40.333Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@content-desc="input-text-result"]")
+[0-0] 2023-08-20T16:47:40.334Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.EditText[@content-desc="text-input"]")
+[0-0] 2023-08-20T16:47:40.334Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:40.334Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '//android.widget.TextView[@content-desc="input-text-result"]'
 [0-0] }
-[0-0] 2023-08-16T02:21:19.249Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:19.249Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:40.335Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:40.335Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '//android.widget.EditText[@content-desc="text-input"]'
 [0-0] }
-[0-0] 2023-08-16T02:21:19.498Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0b9f-ffff-ffff00000050',
-[0-0]   ELEMENT: '00000000-0000-0b9f-ffff-ffff00000050'
+[0-0] 2023-08-20T16:47:40.562Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc3-ffff-ffff00000050',
+[0-0]   ELEMENT: '00000000-0000-0bc3-ffff-ffff00000050'
 [0-0] }
-[0-0] 2023-08-16T02:21:19.552Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0b9f-ffff-ffff0000004d',
-[0-0]   ELEMENT: '00000000-0000-0b9f-ffff-ffff0000004d'
+[0-0] 2023-08-20T16:47:40.607Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc3-ffff-ffff0000004d',
+[0-0]   ELEMENT: '00000000-0000-0bc3-ffff-ffff0000004d'
 [0-0] }
-[0-0] 2023-08-16T02:21:19.555Z INFO webdriver: COMMAND elementClear("00000000-0000-0b9f-ffff-ffff0000004d")
-[0-0] 2023-08-16T02:21:19.555Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff0000004d/clear
-[0-0] 2023-08-16T02:21:19.569Z INFO webdriver: RESULT null
-[0-0] 2023-08-16T02:21:19.569Z INFO webdriver: COMMAND elementSendKeys("00000000-0000-0b9f-ffff-ffff0000004d", "Teste")
-[0-0] 2023-08-16T02:21:19.569Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff0000004d/value
-[0-0] 2023-08-16T02:21:19.569Z INFO webdriver: DATA { text: 'Teste' }
-[0-0] 2023-08-16T02:21:20.596Z INFO webdriver: RESULT null
-[0-0] 2023-08-16T02:21:20.596Z INFO webdriver: COMMAND getElementText("00000000-0000-0b9f-ffff-ffff00000050")
-[0-0] 2023-08-16T02:21:20.597Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff00000050/text
-[0-0] 2023-08-16T02:21:20.634Z INFO webdriver: RESULT 
-[0-0] Error in "module 16 task.test input field"
-Error: expect(received).toEqual(expected) // deep equality
-
-Expected: "Teste"
-Received: ""
-    at Context.<anonymous> (/home/sirenan/Tgrounds/ebac/module-16/test/specs/task.spec.js:18:24)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-[0-0] 2023-08-16T02:21:20.640Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.Switch[@content-desc="switch"]")
-[0-0] 2023-08-16T02:21:20.640Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:20.640Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:40.609Z INFO webdriver: COMMAND elementClear("00000000-0000-0bc3-ffff-ffff0000004d")
+[0-0] 2023-08-20T16:47:40.610Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff0000004d/clear
+[0-0] 2023-08-20T16:47:40.620Z INFO webdriver: RESULT null
+[0-0] 2023-08-20T16:47:40.621Z INFO webdriver: COMMAND elementSendKeys("00000000-0000-0bc3-ffff-ffff0000004d", "Teste")
+[0-0] 2023-08-20T16:47:40.621Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff0000004d/value
+[0-0] 2023-08-20T16:47:40.621Z INFO webdriver: DATA { text: 'Teste' }
+[0-0] 2023-08-20T16:47:41.653Z INFO webdriver: RESULT null
+[0-0] 2023-08-20T16:47:41.653Z INFO webdriver: COMMAND getElementText("00000000-0000-0bc3-ffff-ffff00000050")
+[0-0] 2023-08-20T16:47:41.654Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff00000050/text
+[0-0] 2023-08-20T16:47:42.253Z INFO webdriver: RESULT Teste
+[0-0] 2023-08-20T16:47:42.256Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.Switch[@content-desc="switch"]")
+[0-0] 2023-08-20T16:47:42.256Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:42.256Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '//android.widget.Switch[@content-desc="switch"]'
 [0-0] }
-[0-0] 2023-08-16T02:21:21.265Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0b9f-ffff-ffff00000053',
-[0-0]   ELEMENT: '00000000-0000-0b9f-ffff-ffff00000053'
+[0-0] 2023-08-20T16:47:42.310Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc3-ffff-ffff00000053',
+[0-0]   ELEMENT: '00000000-0000-0bc3-ffff-ffff00000053'
 [0-0] }
-[0-0] 2023-08-16T02:21:21.268Z INFO webdriver: COMMAND elementClick("00000000-0000-0b9f-ffff-ffff00000053")
-[0-0] 2023-08-16T02:21:21.268Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff00000053/click
-[0-0] 2023-08-16T02:21:21.311Z INFO webdriver: RESULT null
-[0-0] 2023-08-16T02:21:21.312Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@content-desc="switch-text"]")
-[0-0] 2023-08-16T02:21:21.312Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:21.312Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:42.313Z INFO webdriver: COMMAND elementClick("00000000-0000-0bc3-ffff-ffff00000053")
+[0-0] 2023-08-20T16:47:42.313Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff00000053/click
+[0-0] 2023-08-20T16:47:42.349Z INFO webdriver: RESULT null
+[0-0] 2023-08-20T16:47:42.349Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.TextView[@content-desc="switch-text"]")
+[0-0] 2023-08-20T16:47:42.349Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:42.349Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '//android.widget.TextView[@content-desc="switch-text"]'
 [0-0] }
-[0-0] 2023-08-16T02:21:21.424Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0b9f-ffff-ffff00000054',
-[0-0]   ELEMENT: '00000000-0000-0b9f-ffff-ffff00000054'
+[0-0] 2023-08-20T16:47:42.471Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc3-ffff-ffff00000054',
+[0-0]   ELEMENT: '00000000-0000-0bc3-ffff-ffff00000054'
 [0-0] }
-[0-0] 2023-08-16T02:21:21.427Z INFO webdriver: COMMAND getElementText("00000000-0000-0b9f-ffff-ffff00000054")
-[0-0] 2023-08-16T02:21:21.427Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff00000054/text
-[0-0] 2023-08-16T02:21:21.950Z INFO webdriver: RESULT Click to turn the switch OFF
-[0-0] 2023-08-16T02:21:21.951Z INFO webdriver: COMMAND findElement("xpath", "//android.view.ViewGroup[@content-desc="Dropdown"]/android.view.ViewGroup/android.widget.EditText")
-[0-0] 2023-08-16T02:21:21.952Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:21.952Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:42.474Z INFO webdriver: COMMAND getElementText("00000000-0000-0bc3-ffff-ffff00000054")
+[0-0] 2023-08-20T16:47:42.474Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff00000054/text
+[0-0] 2023-08-20T16:47:42.988Z INFO webdriver: RESULT Click to turn the switch OFF
+[0-0] 2023-08-20T16:47:42.990Z INFO webdriver: COMMAND findElement("xpath", "//android.view.ViewGroup[@content-desc="Dropdown"]/android.view.ViewGroup/android.widget.EditText")
+[0-0] 2023-08-20T16:47:42.990Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:42.990Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '//android.view.ViewGroup[@content-desc="Dropdown"]/android.view.ViewGroup/android.widget.EditText'
 [0-0] }
-[0-0] 2023-08-16T02:21:22.045Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0b9f-ffff-ffff00000059',
-[0-0]   ELEMENT: '00000000-0000-0b9f-ffff-ffff00000059'
+[0-0] 2023-08-20T16:47:43.071Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc3-ffff-ffff00000059',
+[0-0]   ELEMENT: '00000000-0000-0bc3-ffff-ffff00000059'
 [0-0] }
-[0-0] 2023-08-16T02:21:22.050Z INFO webdriver: COMMAND elementClick("00000000-0000-0b9f-ffff-ffff00000059")
-[0-0] 2023-08-16T02:21:22.050Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff00000059/click
-[0-0] 2023-08-16T02:21:22.094Z INFO webdriver: RESULT null
-[0-0] 2023-08-16T02:21:22.095Z INFO webdriver: COMMAND findElement("xpath", "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")
-[0-0] 2023-08-16T02:21:22.095Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:22.095Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:43.074Z INFO webdriver: COMMAND elementClick("00000000-0000-0bc3-ffff-ffff00000059")
+[0-0] 2023-08-20T16:47:43.074Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff00000059/click
+[0-0] 2023-08-20T16:47:43.132Z INFO webdriver: RESULT null
+[0-0] 2023-08-20T16:47:43.132Z INFO webdriver: COMMAND findElement("xpath", "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")
+[0-0] 2023-08-20T16:47:43.133Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:43.133Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]'
 [0-0] }
-[0-0] 2023-08-16T02:21:22.389Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0ba0-ffff-ffff0000007e',
-[0-0]   ELEMENT: '00000000-0000-0ba0-ffff-ffff0000007e'
+[0-0] 2023-08-20T16:47:43.843Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc4-ffff-ffff0000007e',
+[0-0]   ELEMENT: '00000000-0000-0bc4-ffff-ffff0000007e'
 [0-0] }
-[0-0] 2023-08-16T02:21:22.392Z INFO webdriver: COMMAND elementClick("00000000-0000-0ba0-ffff-ffff0000007e")
-[0-0] 2023-08-16T02:21:22.393Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0ba0-ffff-ffff0000007e/click
-[0-0] 2023-08-16T02:21:23.515Z INFO webdriver: RESULT null
-[0-0] 2023-08-16T02:21:23.516Z INFO webdriver: COMMAND getElementText("00000000-0000-0b9f-ffff-ffff00000059")
-[0-0] 2023-08-16T02:21:23.516Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff00000059/text
-[0-0] 2023-08-16T02:21:23.527Z INFO webdriver: RESULT webdriver.io is awesome
-[0-0] 2023-08-16T02:21:23.528Z INFO webdriver: COMMAND executeScript("mobile: shell", <object>)
-[0-0] 2023-08-16T02:21:23.528Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/execute/sync
-[0-0] 2023-08-16T02:21:23.528Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:43.846Z INFO webdriver: COMMAND elementClick("00000000-0000-0bc4-ffff-ffff0000007e")
+[0-0] 2023-08-20T16:47:43.847Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc4-ffff-ffff0000007e/click
+[0-0] 2023-08-20T16:47:44.515Z INFO webdriver: RESULT null
+[0-0] 2023-08-20T16:47:44.516Z INFO webdriver: COMMAND getElementText("00000000-0000-0bc3-ffff-ffff00000059")
+[0-0] 2023-08-20T16:47:44.516Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff00000059/text
+[0-0] 2023-08-20T16:47:44.526Z INFO webdriver: RESULT webdriver.io is awesome
+[0-0] 2023-08-20T16:47:44.527Z INFO webdriver: COMMAND executeScript("mobile: shell", <object>)
+[0-0] 2023-08-20T16:47:44.527Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/execute/sync
+[0-0] 2023-08-20T16:47:44.527Z INFO webdriver: DATA {
 [0-0]   script: 'mobile: shell',
 [0-0]   args: [ { command: 'input swipe', args: [Array] } ]
 [0-0] }
-[0-0] 2023-08-16T02:21:24.585Z INFO webdriver: RESULT 
-[0-0] 2023-08-16T02:21:24.585Z INFO webdriver: COMMAND findElement("xpath", "//android.view.ViewGroup[@content-desc="button-Active"]")
-[0-0] 2023-08-16T02:21:24.585Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:24.586Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:45.571Z INFO webdriver: RESULT 
+[0-0] 2023-08-20T16:47:45.571Z INFO webdriver: COMMAND findElement("xpath", "//android.view.ViewGroup[@content-desc="button-Active"]")
+[0-0] 2023-08-20T16:47:45.571Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:45.571Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '//android.view.ViewGroup[@content-desc="button-Active"]'
 [0-0] }
-[0-0] 2023-08-16T02:21:24.848Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0b9f-ffff-ffff0000005f',
-[0-0]   ELEMENT: '00000000-0000-0b9f-ffff-ffff0000005f'
+[0-0] 2023-08-20T16:47:45.860Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc3-ffff-ffff0000005f',
+[0-0]   ELEMENT: '00000000-0000-0bc3-ffff-ffff0000005f'
 [0-0] }
-[0-0] 2023-08-16T02:21:24.850Z INFO webdriver: COMMAND elementClick("00000000-0000-0b9f-ffff-ffff0000005f")
-[0-0] 2023-08-16T02:21:24.850Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0b9f-ffff-ffff0000005f/click
-[0-0] 2023-08-16T02:21:24.899Z INFO webdriver: RESULT null
-[0-0] 2023-08-16T02:21:24.900Z INFO webdriver: COMMAND findElement("xpath", "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView")
-[0-0] 2023-08-16T02:21:24.900Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element
-[0-0] 2023-08-16T02:21:24.900Z INFO webdriver: DATA {
+[0-0] 2023-08-20T16:47:45.863Z INFO webdriver: COMMAND elementClick("00000000-0000-0bc3-ffff-ffff0000005f")
+[0-0] 2023-08-20T16:47:45.863Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc3-ffff-ffff0000005f/click
+[0-0] 2023-08-20T16:47:45.899Z INFO webdriver: RESULT null
+[0-0] 2023-08-20T16:47:45.899Z INFO webdriver: COMMAND findElement("xpath", "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView")
+[0-0] 2023-08-20T16:47:45.899Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element
+[0-0] 2023-08-20T16:47:45.899Z INFO webdriver: DATA {
 [0-0]   using: 'xpath',
 [0-0]   value: '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView'
 [0-0] }
-[0-0] 2023-08-16T02:21:24.969Z INFO webdriver: RESULT {
-[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0ba1-ffff-ffff0000008f',
-[0-0]   ELEMENT: '00000000-0000-0ba1-ffff-ffff0000008f'
+[0-0] 2023-08-20T16:47:46.208Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0bc5-ffff-ffff0000008f',
+[0-0]   ELEMENT: '00000000-0000-0bc5-ffff-ffff0000008f'
 [0-0] }
-[0-0] 2023-08-16T02:21:24.972Z INFO webdriver: COMMAND getElementText("00000000-0000-0ba1-ffff-ffff0000008f")
-[0-0] 2023-08-16T02:21:24.972Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/element/00000000-0000-0ba1-ffff-ffff0000008f/text
-[0-0] 2023-08-16T02:21:25.441Z INFO webdriver: RESULT This button is active
-[0-0] 2023-08-16T02:21:25.442Z INFO webdriver: COMMAND stopRecordingScreen()
-[0-0] 2023-08-16T02:21:25.443Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa/appium/stop_recording_screen
-[0-0] 2023-08-16T02:21:26.228Z INFO webdriver: RESULT AAAAGGZ0eXBtcDQyAAAAAGlzb21tcDQyAAAMeGZyZWUwMDAwMDAwMDAwMDAwM...
-[0-0] 2023-08-16T02:21:26.241Z INFO webdriver: COMMAND deleteSession()
-[0-0] 2023-08-16T02:21:26.242Z INFO webdriver: [DELETE] http://127.0.0.1:4723/wd/hub/session/925bb100-4a28-4251-abef-b329241854aa
-[0-0] 2023-08-16T02:21:26.438Z INFO webdriver: RESULT null
-[0-0] FAILED in Android - file:///test/specs/task.spec.js
-2023-08-16T02:21:26.551Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
-2023-08-16T02:21:26.551Z INFO @wdio/cli:launcher: Run onComplete hook
+[0-0] 2023-08-20T16:47:46.212Z INFO webdriver: COMMAND getElementText("00000000-0000-0bc5-ffff-ffff0000008f")
+[0-0] 2023-08-20T16:47:46.213Z INFO webdriver: [GET] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/element/00000000-0000-0bc5-ffff-ffff0000008f/text
+[0-0] 2023-08-20T16:47:46.444Z INFO webdriver: RESULT This button is active
+[0-0] 2023-08-20T16:47:46.445Z INFO webdriver: COMMAND stopRecordingScreen()
+[0-0] 2023-08-20T16:47:46.446Z INFO webdriver: [POST] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc/appium/stop_recording_screen
+[0-0] 2023-08-20T16:47:47.220Z INFO webdriver: RESULT AAAAGGZ0eXBtcDQyAAAAAGlzb21tcDQyAAAMeGZyZWUwMDAwMDAwMDAwMDAwM...
+[0-0] 2023-08-20T16:47:47.233Z INFO webdriver: COMMAND deleteSession()
+[0-0] 2023-08-20T16:47:47.233Z INFO webdriver: [DELETE] http://127.0.0.1:4723/wd/hub/session/f34c5625-dab6-49cf-b261-d9bbf05b1bbc
+[0-0] 2023-08-20T16:47:47.452Z INFO webdriver: RESULT null
+[0-0] PASSED in Android - file:///test/specs/task.spec.js
+2023-08-20T16:47:47.567Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-08-20T16:47:47.568Z INFO @wdio/cli:launcher: Run onComplete hook
 
  "spec" Reporter:
 ------------------------------------------------------------------
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] Running: /home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk on Android
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] Session ID: 925bb100-4a28-4251-abef-b329241854aa
+[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] Session ID: f34c5625-dab6-49cf-b261-d9bbf05b1bbc
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] » /test/specs/task.spec.js
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] module 16 task
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]    ✖ test input field
+[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]    ✓ test input field
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]    ✓ test switch field
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]    ✓ test dropdown field
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]    ✓ test click button
 [/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] 3 passing (8.6s)
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] 1 failing
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] 1) module 16 task test input field
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] expect(received).toEqual(expected) // deep equality
-
-Expected: "Teste"
-Received: ""
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] Error: expect(received).toEqual(expected) // deep equality
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] Expected: "Teste"
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] Received: ""
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]     at Context.<anonymous> (/home/sirenan/Tgrounds/ebac/module-16/test/specs/task.spec.js:18:24)
-[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[/home/sirenan/Tgrounds/ebac/module-16/apps/wdio.apk Android #0-0] 4 passing (8.6s)
 
 
-Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:13 
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:13 
 
-2023-08-16T02:21:26.552Z INFO @wdio/local-runner: Shutting down spawned worker
-2023-08-16T02:21:26.804Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
-2023-08-16T02:21:26.804Z INFO @wdio/local-runner: shutting down
+2023-08-20T16:47:47.569Z INFO @wdio/local-runner: Shutting down spawned worker
+2023-08-20T16:47:47.821Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2023-08-20T16:47:47.821Z INFO @wdio/local-runner: shutting down
